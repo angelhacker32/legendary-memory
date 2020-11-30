@@ -28,7 +28,8 @@ int main(){
   angulo1 = funcion3(a,b);
   angulo2 = funcion4(c,d);
   distancia = funcion5(a,b,c,d);
-  pendiente2 = funcion6(a,b,c,d);
+  recta = funcion6(a,b,c,d);
+  pendiente2 = funcion7(a,b,c,d);
   sumax = (a+c);
   sumay = (b+d);
   restax = (a-c);
@@ -98,9 +99,17 @@ float funcion5(float a,float b,float c,float d) //distancia entre ambos puntos
    return distancia;
 }
 
-float funcion6(float a,float b,float c,float d) //pendiente //me cambia el signo ):
+float funcion6(float a,float b,float c,float d) //ecuación de la recta
+{
+   float pendiente, recta;
+   pendiente = (d-b)/(a-c);
+   recta = (c-(pendiente*a));
+   return recta;
+}
+
+float funcion7(float a,float b,float c,float d) //pendiente //me cambia el signo ):
 {
    float pendiente2;
-   pendiente2 = ((d-b)/(a-c));
+   pendiente2 = (d-b)/(a-c);
    return pendiente2;
 }
